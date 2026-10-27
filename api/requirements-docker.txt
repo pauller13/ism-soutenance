@@ -1,0 +1,23 @@
+# Dépendances complètes de l'API en conteneur.
+# Les versions ML sont alignées sur celles qui ont servi à entraîner/sauvegarder les
+# modèles (sinon le désérialisation .joblib peut échouer). Prophet n'est pas requis :
+# l'API ne charge que des modèles SARIMAX (statsmodels), XGBoost et scikit-learn.
+
+# API
+fastapi==0.125.0
+uvicorn[standard]==0.54.0
+pydantic==2.14.1
+python-multipart==0.0.32
+
+# Données
+pandas==3.0.6
+numpy==2.5.3
+pyarrow==26.0.0
+joblib==1.6.0
+scipy==1.18.1
+
+# Modèles
+statsmodels==0.15.0
+xgboost==3.4.1
+scikit-learn==1.9.1
+shap==0.54.1

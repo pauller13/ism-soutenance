@@ -1,0 +1,29 @@
+# Lance les deux tiers de la solution web CNPS :
+#   docker compose up --build
+# Interface : http://localhost:8080   |   API : http://localhost:8000/docs
+#
+# Les modèles et les données restent sur l'hôte et sont montés en lecture seule :
+# lancer d'abord les notebooks 0 -> 4 pour qu'ils existent dans modeles/ et data/.
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: cnps-api
+    volumes:
+      - ./modeles:/app/modeles:ro
+      - ./data:/app/data:ro
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./web
+    container_name: cnps-web
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped

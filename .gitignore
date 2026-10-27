@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────────────────────
+#  Dépôt soutenance CNPS - on versionne le code source, les
+#  notebooks, les modèles et les LIVRABLES finaux.
+#  On exclut les données (sensibles), la machinerie de génération
+#  régénérable, et les archives/artefacts lourds.
+# ─────────────────────────────────────────────────────────────
+
+# Environnements Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Front Angular : dépendances et build
+web/node_modules/
+web/dist/
+web/.angular/
+
+# …et tout fichier de données où qu'il soit (brut, intermédiaire, propre)
+*.parquet
+*.csv
+*.xlsx
+*.xls
+
+# Livrables (docx, pptx, figures) - régénérables, non versionnés
+livrables/
+
+# Scripts de génération (racine) - on ne versionne pas la machinerie
+generer_explications_pdf.py
+
+# Archives
+*.zip
+
+# Sortie HTML intermédiaire (on garde EXPLICATIONS.md et .pdf)
+EXPLICATIONS.html
+
+# Verrous Office / fichiers temporaires
+~$*
+*.tmp
+
+# OS
+Thumbs.db
+.DS_Store

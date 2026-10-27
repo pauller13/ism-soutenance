@@ -1,0 +1,16 @@
+# Contexte de build de l'API (api/Dockerfile). On n'envoie au démon Docker que le code :
+# les modèles et les données sont montés en volumes, pas copiés.
+.venv/
+**/__pycache__/
+**/*.pyc
+.git/
+.claude/
+web/
+livrables/
+data/
+modeles/
+*.ipynb
+*.zip
+*.docx
+*.xlsx
+*.pptx

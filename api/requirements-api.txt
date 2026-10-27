@@ -1,0 +1,7 @@
+# Dépendances de l'API (en plus de celles des notebooks : pandas, joblib, xgboost,
+# scikit-learn, statsmodels, shap, prophet).
+fastapi==0.125.0
+uvicorn[standard]==0.54.0
+pydantic==2.14.1
+python-multipart==0.0.32
+httpx==0.28.1

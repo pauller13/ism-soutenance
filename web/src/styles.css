@@ -1,0 +1,13 @@
+/* Styles globaux - thème CNPS */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #2b3445;
+  line-height: 1.5;
+}
+h1 { font-size: 1.5rem; color: #1f497d; margin: 0 0 .3rem; }
+h3 { color: #1f497d; margin: 1rem 0 .4rem; }
+h4 { color: #44506a; margin: .8rem 0 .3rem; }
+a { color: #1f497d; }
